@@ -1,0 +1,9 @@
+{
+    "presets": [
+        "minify",
+        "es2017"
+    ],
+    "only": [
+        "decorator.js"
+    ]
+}

@@ -7,12 +7,18 @@
   "author": "Tristan Matthias <hello@tristanmatthias.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "build:prod": "tsc; babel decorator.js -o decorator.js"
   },
   "devDependencies": {
     "@types/redux": "^3.6.0",
+    "babel-preset-minify": "^0.3.0",
     "redux": "^3.7.2",
     "tslint": "^5.9.1",
     "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2017": "^6.24.1"
   }
 }

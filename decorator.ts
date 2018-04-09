@@ -29,9 +29,16 @@ export default (store: Store<any>, mapStateToProps: MapStateToPropsFunction, map
                 for (const [type, func] of Object.entries(this.mapDispatchToEvents)) {
                     this._eventDispatchMap[type] = async (event: CustomEvent) => {
                         event.stopImmediatePropagation();
-                        const detail = await func(store.dispatch)(...event.detail || []);
 
-                        this.shadowRoot.dispatchEvent(new CustomEvent(`${type}-done`, {
+                        // If event.detail is array, expand array into parameters
+                        let fn;
+                        if (event.detail instanceof Array) fn = func(...event.detail);
+                        // Otherwise use event.detail as an object
+                        else fn = func(event.detail);
+
+                        const detail = await fn(store.dispatch);
+
+                        (this.shadowRoot || this).dispatchEvent(new CustomEvent(`${type}-done`, {
                             bubbles: true,
                             detail
                         }));
