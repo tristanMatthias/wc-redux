@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Redux for Web Component's Custom Elements",
   "main": "decorator.js",
+  "typings": "decorator.d.ts",
   "repository": "https://github.com/tristanMatthias/wc-redux.git",
   "author": "Tristan Matthias <hello@tristanmatthias.com>",
   "license": "MIT",
