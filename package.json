@@ -1,6 +1,6 @@
 {
   "name": "wc-redux",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Redux for Web Component's Custom Elements",
   "main": "decorator.js",
   "repository": "https://github.com/tristanMatthias/wc-redux.git",
