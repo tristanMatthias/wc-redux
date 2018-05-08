@@ -16,6 +16,7 @@
     "babel-preset-minify": "^0.3.0",
     "redux": "^3.7.2",
     "tslint": "^5.9.1",
+    "tslint-config-origami": "^1.0.1",
     "typescript": "^2.7.2"
   },
   "dependencies": {
